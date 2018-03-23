@@ -31,3 +31,7 @@ A designated method (``On Drop`` database method by default) is used as a launch
 Some tricks are used to coordinate the timing. First, the macro even ``on_load`` is used to trigger the method that posts the keyboard shortcuts. It is also used to differentiate the context, whether the method being used as launch pad or if it is being edited in a normal way. The macro ``on_close`` is also used to restore the original code that was replaced with the "launch code". 
 
 Because editor windows take time to open, there is no guarantee that the launch pad window is open when the macro runs, or if the form editor is frontmost instead of the method editor. So a new process is started to wait until the launch pad method editor is available and ready to process the "go to definition" keyboard shortcut. This is important because the same keyboard shortcut opens the Explorer window unless a method editor window is the frontmost in design mode.
+
+### More
+
+If you don't like the delegate method opening, perhaps you could edit the form location json file so that it is displayed off screen.
