@@ -8,3 +8,18 @@ Design mode component to open form editor by code
 * Interpreted mode only (``METHOD SET CODE``)  
 
 * Uses ``Macros v2``
+
+## Syntax
+
+```
+METHOD_OPEN_FORM (formName{;tablePtr})
+```
+
+limitations
+
+does not work if caller method is paused by break point or ``TRACE``
+
+Parameter|Type|Description
+------------|------------|----
+formName|TEXT|
+tablePtr|POINTER|
