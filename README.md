@@ -23,3 +23,7 @@ Parameter|Type|Description
 ------------|------------|----
 formName|TEXT|
 tablePtr|POINTER|
+
+### How does it work?
+
+A designated method (``On Drop`` database method by default) is used as a launch pad to open the form editor. The original code is stored in an interprocess variable (why not, this is interpreted mode only) and then the code is replaced by the form name token (optionally prefixed with a table token) and ``METHOD OPEN PATH`` is called to open it. ``POST KEY`` is used to select all, goto definition and close the method editor.
