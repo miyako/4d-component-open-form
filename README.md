@@ -30,7 +30,7 @@ The macro event ``on_load`` is used to trigger the method that posts the keyboar
 
 The macro event ``on_close`` is used to restore the original code that was replaced by the "launch code". 
 
-Because editor windows take time to open, there is no guarantee that the launch pad window is open when the macro runs, or if the form editor is frontmost instead of the method editor. So a new process is started to wait until the launch pad method editor is available and ready to process the "go to definition" keyboard shortcut. This is important because the same keyboard shortcut opens the Explorer window unless a method editor window is the frontmost in design mode.
+Because editor windows take time to open, there is no guarantee that the launch pad window is open when the macro runs, or if the form editor is frontmost instead of the method editor. So a new process is started to wait until the launch pad method editor is available and ready to process the "go to definition" keyboard shortcut. ``SET WINDOW RECT`` is used to activate the window. This is important because the same keyboard shortcut opens the Explorer window unless a method editor window is the frontmost in design mode.
 
 ### More
 
